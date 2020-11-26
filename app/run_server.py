@@ -31,7 +31,7 @@ def load_model(model_path):
         model = dill.load(f)
     print(model)
 
-modelpath = "models/logreg.dill"
+modelpath = "/app/app/models/logreg.dill"
 load_model(modelpath)
 
 @app.route("/", methods=["GET"])
@@ -85,4 +85,4 @@ if __name__ == "__main__":
     print(("* Loading the model and Flask starting server..."
         "please wait until server has fully started"))
     port = int(os.environ.get('PORT', 8180))
-    app.run(host='127.0.0.1', debug=True, port=port)
+    app.run(host='0.0.0.0', debug=True, port=port)

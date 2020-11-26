@@ -29,7 +29,7 @@ app.config.update(
 def get_prediction(Pclass, Sex, Age, Embarked):
     body = {'Pclass': Pclass, 'Sex': Sex,'Age': Age, 'Embarked': Embarked}
 
-    myurl = "http://127.0.0.1:8180/predict"
+    myurl = "http://0.0.0.0:8180/predict"
     req = urllib.request.Request(myurl)
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     jsondata = json.dumps(body)
@@ -75,4 +75,4 @@ def predict_form():
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8181, debug=True)
+    app.run(host='0.0.0.0', port=8181, debug=True)
