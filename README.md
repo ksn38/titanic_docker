@@ -12,10 +12,10 @@ API: flask
 
 Используемые признаки:
 
-- Pclass (text)
-- Sex (text)
-- Age (text)
-- Embarked (text)
+- Pclass (integer)
+- Sex (integer)
+- Age (integer)
+- Embarked (integer)
 
 Преобразования признаков: one hot encoding, stanart scaler
 
